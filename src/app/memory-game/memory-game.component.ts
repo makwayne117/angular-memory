@@ -70,7 +70,16 @@ export class MemoryGameComponent {
       
 
       if (this.matchedCount === this.cards.length) {
-        alert('Congratulations! You have matched all the cards.');
+        if(this.player1pts>this.player2pts){
+          alert('Congratulations Player 1! You got the most matches.');
+        }
+        else if (this.player1pts>this.player2pts){
+          alert('Congratulations Player 1! You got the most matches.');
+        }
+        else{
+          alert('Tie game!');
+        }
+       
       }
     } else {
       console.log("no match");
@@ -94,5 +103,7 @@ export class MemoryGameComponent {
     });
 
     this.matchedCount = 0;
+    this.player1pts = 0;
+    this.player2pts = 0;
   }
 }
